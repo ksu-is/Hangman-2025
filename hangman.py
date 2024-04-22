@@ -35,6 +35,8 @@ print("Try to guess the word to save the hanging man!")
 print("You have 6 incorrect guesses before the man is fully hung.")
 print("Good luck!\n")
 
+# Define a list of hints corresponding to each word in the word list
+    return hints.get(word, "No hint available for this word.")
 # Setup buttons
 increase = round(winWidth / 13)
 for i in range(26):
