@@ -5,6 +5,7 @@
 import pygame
 import random
 
+
 pygame.init()
 winHeight = 480
 winWidth = 700
@@ -28,6 +29,26 @@ guessed = []
 hangmanPics = [pygame.image.load('hangman0.png'), pygame.image.load('hangman1.png'), pygame.image.load('hangman2.png'), pygame.image.load('hangman3.png'), pygame.image.load('hangman4.png'), pygame.image.load('hangman5.png'), pygame.image.load('hangman6.png')]
 
 limbs = 0
+
+print("Welcome to Hangman!")
+print("Try to guess the word to save the hanging man!")
+print("You have 6 incorrect guesses before the man is fully hung.")
+print("Good luck!\n")
+
+# Setup buttons
+increase = round(winWidth / 13)
+for i in range(26):
+    if i < 13:
+        y = 40
+        x = 25 + (increase * i)
+    else:
+        x = 25 + (increase * (i - 13))
+        y = 85
+    buttons.append([LIGHT_BLUE, x, y, 20, True, 65 + i])
+    # buttons.append([color, x_pos, y_pos, radius, visible, char])
+
+word = random.random()
+inPlay = True
 
 
 def redraw_game_window():
