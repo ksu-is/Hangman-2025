@@ -205,3 +205,4 @@ while inPlay:
 pygame.quit()
 
 # always quit pygame when done!
+def restart_game():
