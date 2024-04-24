@@ -48,9 +48,11 @@ def get_hint(word):
     # Get the hint corresponding to the given word
     return hints.get(word, "No hint available for this word.")
 
+# Define difficulty levels with their respective parameters
 difficulty_levels = {
 "easy": {"tries": 7, "hint_available": True},
     "medium": {"tries": 5, "hint_available": True},
+    "hard": {"tries": 3, "hint_available": False},
 
 }
 
