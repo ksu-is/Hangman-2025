@@ -36,13 +36,7 @@ print("Try to guess the word to save the hanging man!")
 print("You have 6 incorrect guesses before the man is fully hung.")
 print("Good luck!\n")
 
-# Define a list of hints corresponding to each word in the word list
-hints = {
-    "apple": "A common fruit often red or green.",
-    "banana": "A yellow fruit that grows in bunches.",
-    "orange": "A citrus fruit that is round and orange in color.",
-    # Add more hints for other words as needed
-}
+
 
 def get_hint(word):
     # Get the hint corresponding to the given word
