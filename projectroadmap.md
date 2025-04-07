@@ -1,5 +1,5 @@
-- [] look for exisiting code that relates to hangman
-- [] evaluate the repository; is it considered "good" coding? 
+- [✓] look for exisiting code that relates to hangman
+- [✓] evaluate the repository; is it considered "good" coding? 
 - [] download the repo and pygame
 - [] run the code and test it out
 - [] observe what happens after running the code
