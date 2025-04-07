@@ -1,8 +1,8 @@
 - [✓] look for exisiting code that relates to hangman
-- [✓] evaluate the repository; is it considered "good" coding? 
-- [ ] download the repo and pygame
-- [ ] run the code and test it out
-- [ ] observe what happens after running the code
+- [✓] evaluate the repository; is it considered "good" coding?
+-  [ ] download the repo and pygame
+-  [ ] run the code and test it out
+-  [ ] observe what happens after running the code
 - [ ] are there errors? if so document them
 - [ ] if you were able to run the code, how did you do it?
 - [ ] analyze if the repo is well documented
