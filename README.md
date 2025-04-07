@@ -7,3 +7,15 @@ The screen displays a dotted line representing the mystery word and a podium whe
 # Requirements
 - Python 3.x
 - pygame
+
+             ________
+            |        |
+          __|__      | 
+         |     |     |
+         |_____|     |
+          \ | /      |             _____  _____  _____  _____  _____  _____  _____  _____ 
+           \|/       |
+            |        |
+           / \       |
+          /   \      |
+               ______|______
