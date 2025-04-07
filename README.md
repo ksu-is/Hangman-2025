@@ -1,5 +1,5 @@
-# Hangman-Python
-A simple hangman game made with python and pygame. This was made as a beginner pygame project in grade 11 (2017).
+# Hangman-2025
+This project is a modern take on the classic childhood game 'Hangman,' where the goal is to correctly guess the letters of a hidden word and ultimately identify the word in its entirety. Made in 2025.
 
 # Requirements
 - Python 3.x
@@ -7,7 +7,7 @@ A simple hangman game made with python and pygame. This was made as a beginner p
 
 # Run in GitPod
 
-You can also run Hnagman in Gitpod, a free online dev environment for GitHub:
+You can also run Hangman in Gitpod, a free online dev environment for GitHub:
 
 If you're intersted in a paid subscription with GitPod use the coupon code: **TECHWITHTIM19**
 
