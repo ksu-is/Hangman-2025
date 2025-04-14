@@ -1,6 +1,6 @@
 #########################################################
-## File Name: hangman.py                               ##
-## Description: Starter for Hangman project - ICS3U    ##
+## File Name: hangman-2025                               ##
+## Description: Starter for Hangman project              ##
 #########################################################
 import pygame
 import random
