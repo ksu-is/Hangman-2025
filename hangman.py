@@ -1,6 +1,6 @@
 #########################################################
-## File Name: hangman-2025                               ##
-## Description: Starter for Hangman project              ##
+## File Name: Hangman-2025                               ##
+## Description: Project IS3020                           ##
 #########################################################
 import pygame # type: ignore
 import random
@@ -33,6 +33,7 @@ limbs = 0
 # Welcome message
 print("Welcome to Hangman!\n","Try to guess the word(s) to save the hanging man!\n","You have 6 incorrect guesses before the man is fully hung.\n","Good luck!\n")
 
+# The game window
 def redraw_game_window():
     global guessed
     global hangmanPics
@@ -89,7 +90,7 @@ def spacedOut(word, guessed=[]):
             spacedWord += ' '
     return spacedWord
             
-
+#If letter is already guessed the button disappears
 def buttonHit(x, y):
     for i in range(len(buttons)):
         if x < buttons[i][1] + 20 and x > buttons[i][1] - 20:
@@ -97,7 +98,7 @@ def buttonHit(x, y):
                 return buttons[i][5]
     return None
 
-
+#Winner or loser window
 def end(winner=False):
     global limbs
     lostTxt = 'You Lost, press any key to play again...'
