@@ -19,6 +19,7 @@ Ensure your version of Python has been installed correctly to allow add python.e
           \ | /      |             _____  _____  _____  _____  _____  _____  _____  _____             | N      O      P      Q |
            \|/       |                                                                                | R      S      T      U |
             |        |                                                                                | V      W      X      Y |
+<<<<<<< HEAD
            / \       |                                                                                |            Z           |
           /   \      |                                                                                |________________________|
                ______|______
