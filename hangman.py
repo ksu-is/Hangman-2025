@@ -2,7 +2,7 @@
 ## File Name: hangman-2025                               ##
 ## Description: Starter for Hangman project              ##
 #########################################################
-import pygame
+import pygame # type: ignore
 import random
 
 
@@ -31,46 +31,13 @@ hangmanPics = [pygame.image.load('hangman0.png'), pygame.image.load('hangman1.pn
 limbs = 0
 
 # Welcome message
-print("Welcome to Hangman!")
-print("Try to guess the word to save the hanging man!")
-print("You have 6 incorrect guesses before the man is fully hung.")
-print("Good luck!\n")
-
-
-
-def get_hint(word):
-    # Get the hint corresponding to the given word
-    return hints.get(word, "No hint available for this word.")
-
-# Define difficulty levels with their respective parameters
-difficulty_levels = {
-"easy": {"tries": 7, "hint_available": True},
-    "medium": {"tries": 5, "hint_available": True},
-    "hard": {"tries": 3, "hint_available": False},
-
-}
-
-# Setup buttons
-increase = round(winWidth / 13)
-for i in range(26):
-    if i < 13:
-        y = 40
-        x = 25 + (increase * i)
-    else:
-        x = 25 + (increase * (i - 13))
-        y = 85
-    buttons.append([LIGHT_BLUE, x, y, 20, True, 65 + i])
-    # buttons.append([color, x_pos, y_pos, radius, visible, char])
-
-word = random.random()
-inPlay = True
-
+print("Welcome to Hangman!\n","Try to guess the word(s) to save the hanging man!\n","You have 6 incorrect guesses before the man is fully hung.\n","Good luck!\n")
 
 def redraw_game_window():
     global guessed
     global hangmanPics
     global limbs
-    win.fill(GREEN)
+    win.fill(WHITE)
     # Buttons
     for i in range(len(buttons)):
         if buttons[i][4]:
@@ -160,7 +127,7 @@ def end(winner=False):
                 again = False
     reset()
 
-
+# always quit pygame when done!
 def reset():
     global limbs
     global guessed
@@ -168,7 +135,7 @@ def reset():
     global word
     for i in range(len(buttons)):
         buttons[i][4] = True
-
+# Reset all the necessary variables
     limbs = 0
     guessed = []
     word = randomWord()
@@ -185,7 +152,7 @@ for i in range(26):
     else:
         x = 25 + (increase * (i - 13))
         y = 85
-    buttons.append([LIGHT_BLUE, x, y, 20, True, 65 + i])
+    buttons.append([WHITE, x, y, 20, True, 65 + i])
     # buttons.append([color, x_pos, y_pos, radius, visible, char])
 
 word = randomWord()
@@ -201,55 +168,6 @@ while inPlay:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 inPlay = False
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            clickPos = pygame.mouse.get_pos()
-            letter = buttonHit(clickPos[0], clickPos[1])
-            if letter != None:
-                guessed.append(chr(letter))
-                buttons[letter - 65][4] = False
-                if hang(chr(letter)):
-                    if limbs != 5:
-                        limbs += 1
-                    else:
-                        end()
-                else:
-                    print(spacedOut(word, guessed))
-                    if spacedOut(word, guessed).count('_') == 0:
-                        end(True)
-
-pygame.quit()
-
-# always quit pygame when done!
-def restart_game():
-    global limbs
-    global guessed
-    global buttons
-    global word
-
-    # Reset all the necessary variables
-    for i in range(len(buttons)):
-        buttons[i][4] = True
-
-    limbs = 0
-    guessed = []
-    word = randomWord()
-
-# MAINLINE
-word = randomWord()
-inPlay = True
-
-while inPlay:
-    redraw_game_window()
-    pygame.time.delay(10)
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            inPlay = False
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                inPlay = False
-            elif event.key == pygame.K_r:  # Restart game if 'r' key is pressed
-                restart_game()
         if event.type == pygame.MOUSEBUTTONDOWN:
             clickPos = pygame.mouse.get_pos()
             letter = buttonHit(clickPos[0], clickPos[1])
