@@ -6,7 +6,7 @@ The screen displays a dotted line representing the mystery word(s) and a podium 
 
 # Requirements
 - Python 3.x
-- pygame
+- Pygame
 
 # Errors
 Ensure your version of Python has been installed correctly to allow add python.exe to PATH. If coming across any errors in regards to installing Pygame watch https://youtu.be/0x_MEKr0OJQ?si=JQU17G1lSsFxv4UZ
