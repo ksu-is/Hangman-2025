@@ -6,8 +6,8 @@
 - [✓] are there errors? if so document them
 - [✓] if you were able to run the code, how did you do it?
 - [✓] analyze if the repo is well documented
-- [ ] see if there needs to be any modifications in the explaination
-- [ ] write instructions and suggest changes through project maintainer
+- [✓] see if there needs to be any modifications in the explaination
+- [✓] write instructions and suggest changes through project maintainer
 
 When I ran the code an error occured. The terminal said "module 'Pygame' not found"
 I tried to enter "pip install pygame" into the IDLE but there was no pip function found
