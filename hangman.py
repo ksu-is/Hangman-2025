@@ -59,7 +59,7 @@ def redraw_game_window():
     win.blit(pic, (winWidth/2 - pic.get_width()/2 + 20, 150))
     pygame.display.update()
 
-
+#Mystery word is selected
 def randomWord():
     file = open('words.txt')
     f = file.readlines()
@@ -67,11 +67,11 @@ def randomWord():
 
     return f[i][:-1]
 
-
+#Identifies if letter chosen is incorrect
 def hang(guess):
     global word
     if guess.lower() not in word.lower():
-        return True
+        return True 
     else:
         return False
 
@@ -90,7 +90,7 @@ def spacedOut(word, guessed=[]):
             spacedWord += ' '
     return spacedWord
             
-#If letter is already guessed the button disappears
+#Once a letter is chosen the button disappears
 def buttonHit(x, y):
     for i in range(len(buttons)):
         if x < buttons[i][1] + 20 and x > buttons[i][1] - 20:
@@ -111,6 +111,7 @@ def end(winner=False):
         label = lost_font.render(winTxt, 1, BLACK)
     else:
         label = lost_font.render(lostTxt, 1, BLACK)
+        win.fill(RED)
 
     wordTxt = lost_font.render(word.upper(), 1, BLACK)
     wordWas = lost_font.render('The phrase was: ', 1, BLACK)
@@ -128,7 +129,7 @@ def end(winner=False):
                 again = False
     reset()
 
-# always quit pygame when done!
+# Quits pygame when done!
 def reset():
     global limbs
     global guessed
@@ -136,7 +137,7 @@ def reset():
     global word
     for i in range(len(buttons)):
         buttons[i][4] = True
-# Reset all the necessary variables
+# Resets all the necessary variables
     limbs = 0
     guessed = []
     word = randomWord()
